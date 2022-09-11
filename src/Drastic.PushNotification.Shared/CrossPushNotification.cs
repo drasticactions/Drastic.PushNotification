@@ -11,7 +11,7 @@ namespace Drastic.PushNotification
     /// </summary>
     public class CrossPushNotification
     {
-        private static readonly Lazy<IPushNotification?> Implementation = new Lazy<IPushNotification?>(() => CreatePushNotification(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static readonly Lazy<IPushNotification> Implementation = new Lazy<IPushNotification>(() => CreatePushNotification(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Gets current settings to use.

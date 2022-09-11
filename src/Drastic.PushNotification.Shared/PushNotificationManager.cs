@@ -1,4 +1,5 @@
-﻿// <copyright file="PushNotificationManager.cs" company="Drastic Actions">
+﻿#if IOS || MACCATALYST
+// <copyright file="PushNotificationManager.cs" company="Drastic Actions">
 // Copyright (c) Drastic Actions. All rights reserved.
 // </copyright>
 
@@ -548,3 +549,4 @@ namespace Drastic.PushNotification
         }
     }
 }
+#endif

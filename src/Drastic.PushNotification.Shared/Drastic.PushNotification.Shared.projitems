@@ -12,6 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)PushNotificationManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DefaultPushNotificationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CrossPushNotification.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
   </ItemGroup>
 </Project>

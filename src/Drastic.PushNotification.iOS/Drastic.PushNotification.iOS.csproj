@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0-ios</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<WarningsAsErrors>nullable</WarningsAsErrors>
+<!--		<WarningsAsErrors>nullable</WarningsAsErrors>-->
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	  <EnableCodeSigning>false</EnableCodeSigning>
@@ -18,4 +18,5 @@
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
 	</ItemGroup>
+	<Import Project="..\Drastic.PushNotification.Shared\Drastic.PushNotification.Shared.projitems" Label="Shared" Condition="Exists('..\Drastic.PushNotification.Shared\Drastic.PushNotification.Shared.projitems')" />
 </Project>

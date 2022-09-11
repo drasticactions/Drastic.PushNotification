@@ -30,14 +30,14 @@ namespace Drastic.PushNotification
         event PushNotificationResponseEventHandler OnNotificationOpened;
 
         /// <summary>
-        /// Gets or sets notification handler to receive, customize notification feedback and provide user actions.
-        /// </summary>
-        IPushNotificationHandler NotificationHandler { get; set; }
-
-        /// <summary>
         /// Event triggered when a notification is opened by tapping an action
         /// </summary>
         event PushNotificationResponseEventHandler OnNotificationAction;
+
+        /// <summary>
+        /// Gets or sets notification handler to receive, customize notification feedback and provide user actions.
+        /// </summary>
+        IPushNotificationHandler NotificationHandler { get; set; }
 
         /// <summary>
         /// Event triggered when a notification is received
@@ -65,6 +65,11 @@ namespace Drastic.PushNotification
         Func<string> RetrieveSavedToken { get; set; }
 
         /// <summary>
+        /// Gets or sets delegate to save the token.
+        /// </summary>
+        Action<string> SaveToken { get; set; }
+
+        /// <summary>
         /// Register push notifications on demand.
         /// </summary>
         void RegisterForPushNotifications();
@@ -73,11 +78,6 @@ namespace Drastic.PushNotification
         /// Unregister push notifications on demand.
         /// </summary>
         void UnregisterForPushNotifications();
-
-        /// <summary>
-        /// Gets or sets delegate to save the token.
-        /// </summary>
-        Action<string> SaveToken { get; set; }
 
         /// <summary>
         /// Get all user notification categories.

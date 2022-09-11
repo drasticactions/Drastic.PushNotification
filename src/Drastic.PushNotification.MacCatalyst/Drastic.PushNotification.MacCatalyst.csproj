@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0-maccatalyst</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<WarningsAsErrors>nullable</WarningsAsErrors>
+<!--		<WarningsAsErrors>nullable</WarningsAsErrors>-->
 	</PropertyGroup>
 		<ItemGroup>
 		<ProjectReference Include="..\Drastic.PushNotification\Drastic.PushNotification.csproj" />
@@ -12,4 +12,5 @@
 	<ItemGroup>
 		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
 	</ItemGroup>
+	<Import Project="..\Drastic.PushNotification.Shared\Drastic.PushNotification.Shared.projitems" Label="Shared" Condition="Exists('..\Drastic.PushNotification.Shared\Drastic.PushNotification.Shared.projitems')" />
 </Project>
